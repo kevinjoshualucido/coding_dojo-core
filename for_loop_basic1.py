@@ -28,12 +28,17 @@ for num in range(1, 500_001, 2):
 print(sum)
 
 # 5
-num = 2022
+# num = 2022
+# while num > 0:
+#     num -= 4
+#     if not num > 0:
+#         break
+#     print(num)
+# CLEANER CODE:
+num = 2018
 while num > 0:
-    num -= 4
-    if not num > 0:
-        break
     print(num)
+    num -= 4
 # OR
 for num in range(2018, 0, -4):
     print(num)
