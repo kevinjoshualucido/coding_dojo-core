@@ -1,0 +1,33 @@
+SELECT * FROM dojos;
+SELECT * FROM ninjas;
+
+# create 3 dojos
+INSERT INTO dojos (name) VALUES ('Kintsugi'), ('Shikigami'), ('Akatsuki');
+
+# delete all dojos
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM dojos;
+
+# create 3 more dojos
+INSERT INTO dojos (name) VALUES ('Kintsugi'), ('Shikigami'), ('Akatsuki');
+
+# create 3 ninjas from 1st dojo
+INSERT INTO ninjas (dojo_id, first_name, last_name, age)
+VALUES (4, 'Furuta', 'Nagami', 25), (4, 'Hirohito', 'Watanabe', 29), (4, 'Aki', 'Dazai', 27);
+
+# create 3 ninjas from 2nd dojo
+INSERT INTO ninjas (dojo_id, first_name, last_name, age)
+VALUES (5, 'Hiroyuki', 'Sanada', 34), (5, 'Li', 'Kong', 26), (5, 'Ito', 'Kasuki', 31);
+
+# create 3 ninjas from 3rd dojo
+INSERT INTO ninjas (dojo_id, first_name, last_name, age)
+VALUES (6, 'Minato', 'Aishteru', 37), (6, 'Ichigo', 'Fushiguro', 32), (6, 'Inu', 'Maki', 30);
+
+# retreive all ninjas from the 1st dojo
+SELECT * FROM ninjas WHERE dojo_id = 4;
+
+# retreive all ninjas from the last dojo;
+SELECT * FROM ninjas WHERE dojo_id = 6;
+
+# retreive the last ninja's dojo
+SELECT * FROM dojos WHERE id = 6;
